@@ -1,0 +1,191 @@
+:root {
+    --PrimaryColor: hsl(34, 90%, 50%); /* Sable */
+    --SecondaryColor: hsl(28, 80%, 60%); /* Dune */
+    --GradientColor: linear-gradient(to right, hsl(28, 80%, 60%), hsl(29, 83%, 32%));
+    --AccentColor: hsl(44, 90%, 50%); /* Sable */
+    --WhiteColor: hsl(0, 0%, 100%);
+    --BlackColor: hsl(30, 20%, 20%); /* Terre */
+    --TextColor: hsl(30, 20%, 40%); /* Ombre du désert */
+    --WhiteColorDim: hsl(0, 0%, 93%);
+    --GreyText: rgb(180, 180, 180); /* Gris clair pour contraste */
+    --InputColor: rgb(232, 232, 232); /* Sable clair */
+    --BodyColor: rgb(245, 245, 240); /* Très clair, presque blanc avec une touche de sable */
+    --CardBG: rgb(235, 235, 225); /* Fond de carte avec une touche de sable */
+}
+
+
+.home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    z-index: 0;
+}
+
+.home .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(47, 106, 127, 0.5);
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    mix-blend-mode: hard-light;
+}
+
+.home video {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.home .homecontent {
+    width: 100%;
+    height: max-content;
+    padding: 8rem 1.5rem 3rem; 
+    display: flex;
+    row-gap: 3rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    color: var(--WhiteColor);
+    z-index: 100;
+}
+
+.home .homecontent .textdiv {
+    padding: 2rem 0;
+}
+
+.home .homecontent .textdiv .smallText {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.home .homecontent .textdiv .homeTitle {
+    position: relative;
+    font-size: 2rem;
+}
+
+.homecontent .carddiv {
+    position: relative;
+    padding: 2rem 1rem;
+    background: var(--WhiteColor);
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.home .homecontent label {
+    display: block;
+    color: var(--TextColor);
+    padding-bottom: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.home .homecontent .carddiv .input {
+    height: 40px;
+    padding: 0 1rem;
+    background: var(--InputColor);
+    border-radius: 3rem;
+}
+
+.home .homecontent .carddiv input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.home .homecontent .carddiv input::placeholder {
+    font-size: 13px;
+}
+
+.home .homecontent .carddiv .icon {
+    color: var(--PrimaryColor);
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.home .homecontent .carddiv .serchoption {
+    position: absolute;
+    background: var(--GradientColor);
+    width: max-content;
+    bottom: -0.7rem;
+    column-gap: 0.8rem;
+    padding: 5px 1rem;
+    border-radius: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+}
+
+.home .homecontent .carddiv .serchoption:hover {
+    background: var(--PrimaryColor);
+}
+@media screen and (min-width: 500px) {
+    .home .homecontent .textdiv .smallText {
+        font-size: 16px;
+    }
+
+    .home .homecontent .textdiv .homeTitle {
+        position: relative;
+        font-size: 2.3rem;
+        width: max-content;
+    }
+
+    .home .homecontent .textdiv .homeTitle::after {
+        position: absolute;
+        content: '';
+        background: var(--SecondaryColor);
+        height: 5px;
+        width: 145px;
+        right: 0px;
+        bottom: 5px;
+        z-index: -1;
+    }
+
+    .home .homecontent .carddiv {
+        grid-template-columns: repeat(1, 2fr);
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .home .homecontent .carddiv {
+        padding: 2rem 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 940px){
+    .home{
+        height: 70vh;
+    }
+}
+@media screen and (min-width: 1240px){
+    .home{
+        height: 90vh;
+    }
+    .home .homecontent{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .home .homecontent .carddiv {
+        padding: 2rem 1rem;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .home .homecontent .carddiv .serchoption{
+        bottom: -1rem;
+        padding: 8px 1rem;
+    }
+    .home .homecontent .carddiv .serchoption span{
+        font-size: 17px;
+    }
+}

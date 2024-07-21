@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+:root {
+  --PrimaryColor: hsl(34, 90%, 50%); /* Sable */
+  --SecondaryColor: hsl(28, 80%, 60%); /* Dune */
+  --GradientColor: linear-gradient(to right, hsl(28, 80%, 60%), hsl(34, 90%, 50%));
+  --AccentColor: hsl(34, 90%, 50%); /* Sable */
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(30, 20%, 20%); /* Terre */
+  --TextColor: hsl(30, 20%, 40%); /* Ombre du désert */
+  --WhiteColorDim: hsl(0, 0%, 93%);
+  --GreyText: rgb(180, 180, 180); /* Gris clair pour contraste */
+  --InputColor: rgb(232, 232, 232); /* Sable clair */
+  --BodyColor: rgb(245, 245, 240); /* Très clair, presque blanc avec une touche de sable */
+  --CardBG: rgb(235, 235, 225); /* Fond de carte avec une touche de sable */
+}
+
+
+.icon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.grid{
+  display: grid;
+  align-items: center;
+}
+.btn{
+  padding: .6rem 1.5rem;
+  background: var(--GradientColor);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn a{
+  color: var(--WhiteColor);
+  font-weight: 500;
+}
+.btn:hover{
+  background: var(--SecondaryColor);
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+.container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.section{
+  padding: 4rem 0 2rem;
+}
+img,video{
+  width: 100%;
+  height: auto;
+}
+input{
+  font-size: 100%;
+}
+body{
+  background: var(--BodyColor);
+}
+html{
+  scroll-behavior: smooth;
+}
+@media screen and (min-width: 1240px) {
+  .container{
+    width: 80% !important;
+    margin: auto !important;
+  }
+  .section{
+    padding: 6rem 0 4rem;
+  }
+}
+@media screen and (min-width: 2560px){
+   body{
+    zoom: 1.7;
+   }
+}

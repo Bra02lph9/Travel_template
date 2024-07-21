@@ -1,0 +1,198 @@
+:root {
+    --PrimaryColor: hsl(34, 90%, 50%); /* Sable */
+    --SecondaryColor: hsl(28, 80%, 60%); /* Dune */
+    --GradientColor: linear-gradient(to right, hsl(28, 80%, 60%), hsl(34, 90%, 50%));
+    --AccentColor: hsl(34, 90%, 50%); /* Sable */
+    --WhiteColor: hsl(0, 0%, 100%);
+    --BlackColor: hsl(30, 20%, 20%); /* Terre */
+    --TextColor: hsl(30, 20%, 40%); /* Ombre du désert */
+    --WhiteColorDim: hsl(0, 0%, 93%);
+    --GreyText: rgb(180, 180, 180); /* Gris clair pour contraste */
+    --InputColor: rgb(232, 232, 232); /* Sable clair */
+    --BodyColor: rgb(245, 245, 240); /* Très clair, presque blanc avec une touche de sable */
+    --CardBG: rgb(235, 235, 225); /* Fond de carte avec une touche de sable */
+}
+
+
+.footer{
+    width: 100%;
+    position: relative;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    z-index: 100;
+}
+.footer .videoDiv{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.videoDiv video{
+    height: 100%;
+    object-fit: cover;
+}
+.videoDiv::after{
+    content:'';
+    position: absolute;
+    background: rgba(10,84,107,0.307);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+}
+.footer .secContent{
+    width: 100%;
+    height: auto;
+    padding: 2rem initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    row-gap: 2rem;
+    z-index: 1000;
+}
+.secContent .contactDiv{
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+}
+.secContent .contactDiv .text small{
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--WhiteColor);
+}
+ .contactDiv .text h2{
+    color: white;
+    font-size: 1.8rem;
+}
+.secContent .contactDiv .inputDiv{
+    width: 100%;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.secContent .contactDiv .inputDiv input{
+    width: 100%;
+    padding: 0.5rem 0.6rem;
+    border-radius: 3rem;
+    border: 1px solid var(--WhiteColor);
+    outline:none;
+    background: transparent;
+    color: var(--WhiteColor);
+}
+.secContent .contactDiv .inputDiv input::placeholder{
+    color: var(--WhiteColor);
+    opacity: -5;
+}
+.contactDiv .inputDiv .btn{
+    width: 100%;
+    justify-content: center;
+    color: var(--WhiteColor);
+    font-weight:500 ;
+    gap: 0.5rem;
+}
+.inputDiv .icon{
+    font-size: 18px;
+}
+.secContent .footerCard{
+    position: relative;
+    padding: 1rem 1rem 4rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    background: var(--BodyColor);
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+.secContent .footerCard .footerIntro{
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.secContent .footerCard .footerIntro .logoDiv .logo{
+    color: var(--BlackColor);
+    font-weight: 600;
+}
+.secContent .footerCard .footerIntro .logoDiv .icon{
+    font-size: 35px;
+    color: var(--PrimaryColor);
+    padding-right: 10px;
+}
+.secContent .footerCard .footerIntro .footerparagraphe{
+    font-size: 13px;
+    color: var(--TextColor);
+}
+.secContent .footerCard .footerIntro .footersociel{
+    column-gap: 0.5rem;
+}
+.secContent .footerCard .footerIntro .footersociel .icon{
+    color: var(--BlackColor);
+    margin-left: 10px;
+    font-size: 25px;
+    transition: 0.3s ease-in-out;
+
+}
+.secContent .footerCard .footerIntro .footersociel .icon:hover{
+    color: var(--SecondaryColor);
+}
+.secContent .footerCard .footerIntro .footerlinks{
+    flex-basis: 50%;
+    width: 100%;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+}
+.footerlinks .linkgroup{
+    display: block;
+    font-weight: 600;
+    color: var(--BlackColor);
+    margin-bottom: 0.5rem;
+}
+.footerlinks .linkgroup .footerlist{
+    font-size: 15px;
+    color: var(--TextColor);
+    transition: 0.3s ease-in-out;
+}
+.footerlinks .linkgroup .footerlist .icon{
+    font-size: 15px;
+    color: var(--GreyText);
+}
+.footerlinks .linkgroup .footerlist:hover{
+    color: var(--PrimaryColor);
+    transform: translateX(7px);
+}
+.secContent .footerCard .footerDiv{
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--SecondaryColor);
+    padding: 0.5rem 2rem;
+}
+.secContent .footerCard .footerDiv small{
+    font-size: 10px;
+    color: var(--WhiteColor);
+}
+@media screen and (min-width: 600px) {
+    .footer .secContent .footerCard .footerlinks{
+        grid-template-columns: repeat(3,1fr);
+        padding-bottom: 1rem;
+    }
+    .footer .secContent .footerCard .footerDiv{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .footer .secContent .footerCard .footerDiv small{
+        font-size: 14px;
+        color: var(--WhiteColor);
+    }
+}

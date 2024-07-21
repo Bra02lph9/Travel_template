@@ -1,0 +1,165 @@
+:root {
+    --PrimaryColor: hsl(34, 90%, 50%); /* Sable */
+    --SecondaryColor: hsl(28, 80%, 60%); /* Dune */
+    --GradientColor: linear-gradient(to right, hsl(28, 80%, 60%), hsl(34, 90%, 50%));
+    --AccentColor: hsl(34, 90%, 50%); /* Sable */
+    --WhiteColor: hsl(0, 0%, 100%);
+    --BlackColor: hsl(30, 20%, 20%); /* Terre */
+    --TextColor: hsl(30, 20%, 40%); /* Ombre du désert */
+    --WhiteColorDim: hsl(0, 0%, 93%);
+    --GreyText: rgb(180, 180, 180); /* Gris clair pour contraste */
+    --InputColor: rgb(232, 232, 232); /* Sable clair */
+    --BodyColor: rgb(245, 245, 240); /* Très clair, presque blanc avec une touche de sable */
+    --CardBG: rgb(235, 235, 225); /* Fond de carte avec une touche de sable */
+}
+
+
+.header1 {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--WhiteColorDim);
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(2, 15, 29, 0.181);
+}
+.header1 .logo .ban{
+    color:hsl(0, 0%, 0%);
+}
+.header1 .togeleNav,.closeNav {
+display: none;
+}
+.h
+.header1 .logo {
+    color: var(--BlackColor);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo .icon {
+    color: var(--PrimaryColor);
+    font-size: 25px;
+    transform: translateY(5px);
+}
+
+.header1 .togeleNav .icon {
+    font-size: 25px;
+    color: var(--PrimaryColor);
+}
+
+.header1 .togeleNav .icon:hover {
+    color: var(--SecondaryColor);
+}
+
+@media screen and (max-width: 768px) {
+    .header1 .navBardiv {
+        position: absolute;
+        background: var(--WhiteColorDim);
+        height: max-content;
+        width: 80%;
+        border-radius: 1rem;
+        top: -500rem;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 2000;
+        box-shadow: 0px 2px 4px rgba(2, 15, 29, 0.904);
+        transition: 2s ease-in-out;
+    }
+    .header1 .togeleNav,.closeNav {
+        display: block;
+
+        }
+    .header1 .activeNavbar {
+        top: 7rem;
+    }
+
+    .header1 .navlists {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        padding: .9rem 0;
+    }
+
+    .header1 .navitem {
+        padding: .7rem 0;
+    }
+
+    .header1 .navlink {
+        color: var(--TextColor);
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .header1 .navlink:hover {
+        color: var(--PrimaryColor);
+    }
+
+    .header1 .btn {
+        margin-top: 1rem;
+    }
+
+    .header1 .btn a {
+        font-weight: 600;
+        color: var(--WhiteColor);
+    }
+
+    .header1 .closeNav {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        color: var(--PrimaryColor);
+    }
+
+    .header1 .closeNav:hover {
+        color: var(--SecondaryColor);
+    }
+}
+@media screen and (min-width: 769px) {
+    .header1 {
+      padding: 1.5rem 2rem;
+    }  
+    
+    .header1 .navlists {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+    
+    .header1 .navlists .navlink {
+      color: var(--TextColor);
+      padding: 0 0.45rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  
+    .header1 .navlists .navlink:hover {
+      color: var(--PrimaryColor);
+    }
+    .header1 .btn {
+        margin-left: 1rem;
+    }
+
+    .header1 .btn a {
+        color: var(--WhiteColor);
+        font-weight: 500;
+    }
+  }
+  @media screen and(min-width: 960px) {      
+      .header1 .navlists .navlists .navitem {
+        padding: 0 0.7rem;
+      }
+  }
+  @media screen and(min-width: 1240px) {      
+    .header1 .navlists .navlists .navitem {
+      padding: 1 8.5rem;
+    }
+}
+  
+  
