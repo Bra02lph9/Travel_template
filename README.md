@@ -8,6 +8,9 @@ Features
     Animated Scrolling: Smooth animations for elements as they scroll into view, powered by AOS.
     Responsive Design: Adapts to various screen sizes for a seamless user experience.
     Icons: Utilizes react-icons for location and details buttons, adding visual appeal and functionality.
+# ScreeShots 
+<img src="./screenshot/screenshot1.png" width="75%"   />
+<img src="./screenshot/screeshot2.png" width="75%"  />
 
 Installation
 
